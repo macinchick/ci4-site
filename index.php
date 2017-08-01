@@ -17,6 +17,9 @@ define('FCPATH', __DIR__.DIRECTORY_SEPARATOR);
  * and fires up an environment-specific bootstrapping.
  */
 
+// For development only!!!
+$_SERVER['CI_ENVIRONMENT'] = 'development';
+
 // Ensure the current directory is pointing to the front controller's directory
 chdir(__DIR__);
 
@@ -25,6 +28,7 @@ require $pathsPath;
 $paths = new Config\Paths();
 
 $app = require rtrim($paths->systemDirectory,'/ ').'/bootstrap.php';
+
 
 /*
  *---------------------------------------------------------------
