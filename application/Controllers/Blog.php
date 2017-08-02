@@ -5,7 +5,9 @@ class Blog extends BaseController
 
 	public function index()
 	{
-		return view('blog');
+		echo view('site/header');
+		echo view('blog/main');
+		echo view('site/footer');
 	}
 
 	//--------------------------------------------------------------------

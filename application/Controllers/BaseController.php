@@ -5,7 +5,7 @@ use CodeIgniter\Controller;
 class BaseController extends Controller
 {
 
-	protected $helpers = ['cookie', 'filesystem', 'html', 'text'];
+	protected $helpers = ['cookie', 'filesystem', 'form', 'html', 'text'];
 
 	protected $is_patron = NULL;
 
