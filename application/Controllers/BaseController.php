@@ -5,14 +5,24 @@ use CodeIgniter\Controller;
 class BaseController extends Controller
 {
 
-	/**
-	 * An array of helpers to be automatically loaded upon class instantiation.
-	 *
-	 * @var		array
-	 */
-	protected $helpers = ['cookie', 'html', 'text'];
+	protected $helpers = ['cookie', 'filesystem', 'html', 'text'];
+
+	protected $is_patron = NULL;
 
 	//--------------------------------------------------------------------
 
+	public function __construct(...$params)
+	{
+		// Core controller
+		parent::__construct(...$params);
+
+		// Make DB available to controllers
+		$this->db = \Config\Database::connect();
+
+		// Hard coded for testing
+		$this->is_patron = TRUE;
+	}
+
+	//--------------------------------------------------------------------
 
 }

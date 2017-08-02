@@ -7,9 +7,7 @@
 
 	<h1>Goodies</h1>
 
-	<p>stuff</p>
-	<p>stuff</p>
-	<p>stuff</p>
+	<p>If you were a patron, there would be some goodies here.</p>
 
 </body>
 </html>
