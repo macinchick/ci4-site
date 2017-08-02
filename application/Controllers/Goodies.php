@@ -1,11 +1,11 @@
 <?php namespace App\Controllers;
 
-class Home extends BaseController
+class Goodies extends BaseController
 {
 
 	public function index()
 	{
-		return view('home');
+		return view('goodies');
 	}
 
 	//--------------------------------------------------------------------
