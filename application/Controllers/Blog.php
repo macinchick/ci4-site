@@ -1,5 +1,7 @@
 <?php namespace App\Controllers;
 
+use App\Libraries\Parsedown;
+
 class Blog extends BaseController
 {
 
@@ -58,7 +60,10 @@ class Blog extends BaseController
 			$data['extra'] = trim(array_shift($text));
 
 			$content = implode("\n", $text);
-			$data['content'] = $content;
+			$parsedown = new Parsedown();
+			$data['article_content'] = $parsedown->text($content);
+//			$data['byline'] = $meta_data['byline'];
+
 		}
 		// 404
 		else
