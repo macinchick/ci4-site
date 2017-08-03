@@ -4,6 +4,11 @@ class Docs extends BaseController
 {
 
 	/**
+	 * Directory that contains content files
+	 */
+	protected $content_path = APPPATH.'Views/docs_content/';
+
+	/**
 	 * Data for views
 	 */
 	public $view_data = array(

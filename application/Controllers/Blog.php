@@ -8,7 +8,7 @@ class Blog extends BaseController
 	/**
 	 * Directory that contains blog content files
 	 */
-	protected $content_path = 'Views/blog_content/';
+	protected $content_path = APPPATH.'Views/blog_content/';
 
 	/**
 	 * Data for views
@@ -44,7 +44,7 @@ class Blog extends BaseController
 	{
 		$data = $this->view_data;
 
-		$article = APPPATH.$this->content_path.$slug.'/article.md';
+		$article = $this->content_path.$slug.'/article.md';
 
 		// Get and parse article
 		if (file_exists($article))
