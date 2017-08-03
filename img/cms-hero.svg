@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 948 172" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-6.4687,-11.0643)">
+        <g transform="matrix(1.87406,0,0,1.87406,4.4241,10.4009)">
+            <text x="1.265px" y="46px" style="font-family:'CCLegendaryLegerdemain-Bold', 'CCLegendaryLegerdemain';font-weight:700;font-size:58px;">T<tspan x="37.689px 75.157px 110.305px 129.851px 176.425px 202.061px 237.209px 286.509px 302.807px 319.105px 353.963px 373.509px 415.153px 466.019px " y="46px 46px 46px 46px 46px 46px 46px 46px 46px 46px 46px 46px 46px 46px ">he Grawlix CMS</tspan></text>
+        </g>
+        <g transform="matrix(1.87406,0,0,1.87406,-8.64354,-1.53161)">
+            <text x="24.093px" y="97px" style="font-family:'CCLegendaryLegerdemain-Bold', 'CCLegendaryLegerdemain';font-weight:700;font-size:24px;">A WEBCOMIC PUBLISHING SYSTEM</text>
+        </g>
+    </g>
+</svg>
