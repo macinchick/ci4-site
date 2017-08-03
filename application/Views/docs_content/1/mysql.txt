@@ -1,0 +1,10 @@
+MySQL
+MySQL
+Learn about the Grawlix CMS database.
+2015-01-23
+Ben Gremillion
+Tag1, tag2
+
+**MySQL, often pronounced “my sequel,” is a relational database we use to hold most of the information in a Grawlix-based website.** 
+
+Your web host is responsible for creating and holding the database, although the Grawlix CMS adds its own tables to that database [upon installation](./installation). Think spreadsheets that talk to each other. Failing that, you can [ask for a fresh copy](/forum) of the database.

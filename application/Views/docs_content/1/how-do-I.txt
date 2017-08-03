@@ -1,0 +1,29 @@
+How do I?
+How do I?
+Read general topics on the Grawlix CMS.
+2015-01-23
+Ben Gremillion
+Tag1, tag2
+
+# How do I change the site’s banner?
+
+1. Tap “themes” in your admin panel.
+2. Tap the currently selected theme.
+3. Scroll down to the “site banner” input field.
+4. Tap that button and select the new image on your computer.
+5. Tap “save”.
+
+Nerd : The database value is stored in site_milieu. It could be anything, including a remote file if you’re willing to hack it.
+
+## How do I replace a comic page’s image?
+
+1. Tap “chapter list” in your admin panel.
+2. Tap to the chapter that contains the comic page in question.
+3. Tap the “replace” input field and select the new image on your computer.
+4. Tap the green “replace” button.
+
+## How do I change my site’s favicons?
+
+1. Look in /assets/images/system
+2. Read about the different sizes at [Apple’s icon reference](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html)
+

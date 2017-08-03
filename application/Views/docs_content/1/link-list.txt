@@ -1,0 +1,29 @@
+Link lists
+Link lists
+Learn about the link list tool.
+2015-01-23
+Ben Gremillion
+Tag1, tag2
+
+**A “link list” is a collection of sites that artists want to share with her/his readers.** The Grawlix CMS comes with two link lists: One that appears on the side of a page, and one that *is* an entire page.
+
+## Sidebar link list
+
+You can edit the first kind — let’s call it the **side link list** in the admin panel. Look on the left for “link list.” Here each link can have:
+
+- a title (text that the readers tap)
+- a URL (address of the site they’ll visit)
+- and an optional image (uploaded from your computer)
+
+
+
+There is no limit to the number of links you can have. Not beyond common sense, I mean.
+
+## Link list static page
+
+The **link list page** is a [static page](./static-pages) dedicated to taking people to other websites. Link the side link list, each item on the link list page has:
+
+- a title (text that the readers tap)
+- a URL (address of the site they’ll visit)
+- and an optional image (uploaded from your computer)
+

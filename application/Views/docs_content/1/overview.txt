@@ -1,0 +1,77 @@
+What is the Grawlix CMS?
+What is the Grawlix CMS?
+Get a bird’s eye view of the system.
+2015-01-23
+Ben Gremillion
+Tag1, tag2
+
+**The Grawlix CMS is a tool dedicated to publishing comics online.**
+
+Long ago, publishing comics online was easy. Anyone with a text editor, FTP and a dash of HTML know-how could build a website in a weekend. The barrier to entry is still low, but websites are more sophisticated. People expect comments, archives and a slick look. Sometimes even search, text transcripts and mobile-friendliness. Meanwhile artists want to spend [more time drawing](http://www.scottmccloud.com/2-print/1-uc/index.html) and less time debugging code.
+
+Various tools like [WordPress](http://wordpress.com) and [Tumblr](http://www.tumblr.com) help people put their creative work online, but few are dedicated to visual storytelling. Until now. **The Grawlix CMS is your tool dedicated to publishing comics on the web.** Not blogs with comics. Not websites that can handle comics. Comics. Online. Now.
+
+It’s also useful to explain what the Grawlix CMS is *not.*
+
+- **The Grawlix CMS is not WordPress.** It is not a general-purpose publishing tool. You’d be hard-pressed to produce a marketing website with Grawlix.
+- **The Grawlix CMS is not a web host.** It is software that you install into [bluehost](http://www.bluehost.com), [DreamHost](http://www.dreamhost.com), [HostGator](http://www.hostgator.com), or a host of other, um, hosting services.
+- **The Grawlix CMS is not ComiXology.** It is not a comic discovery tool.
+
+
+## Unique features
+
+> “Artists for art, codemonkies for code”
+
+Other systems generalize website development. The Grawlix CMS puts storytelling first. Although you can change most anything about a Grawlix-based site, we created it around publishing and managing stories.
+
+As the artist, you control the creative parts of your site like its pages, chapter titles, book names and organization. Meanwhile the Grawlix CMS handles many nuts-n-bolts aspects of an online comic, including:
+
+{ screen shot of a public-facing Grawlix page }
+
+- **Navigation:** Automatically creates back/next and first/current buttons, even when you reorganize your pages or chapters.
+- **Archives:** Builds a page that lets readers browse past pages.
+- **Look and feel:** Pre-built themes are easy to customize with a little HTML/CSS knowledge.
+- **Publishing schedule:** A unique scheduling system lets you set up how often readers can see each page.
+- **Speed:** Nothing drives readers away faster than [slow websites](http://zurb.com/quips/browse/performance). We’ve developed the Grawlix CMS to load fast, and constantly work to beat our own records.
+
+The Grawlix CMS also lets you embed your Twitter streams and third-party comment systems like Disqus.
+
+
+
+## Origins
+
+A while back, Ben and Cherie were building general-purpose web tools and crafting custom WordPress themes. They were also reading web comics. It wasn’t long before they began to imagine an online comic tool. What would it look like? How would it work? What features would it — and wouldn’t it — have?
+
+What-if conversations turned into sketches, which turned into snippets of code. In early 2014 they began work in earnest. And the rest is history.
+
+## What’s a “grawlix?”
+
+The term “grawlix” comes from Mort Walker, who [used scribbles for profanity in Beetle Bailey comics](http://www.fastcodesign.com/1673017/quimps-plewds-and-grawlixes-the-secret-language-of-comic-strips). Other name ideas included The Comic Management System, [Interrobang](http://blogs.msdn.com/b/fontblog/archive/2005/12/22/506936.aspx), The Walrus, and Paige. Because, why not?
+
+
+
+
+
+
+## Requirements
+
+We started the Grawlix CMS as a simple flat-file system. No database, just text docs. But as its features became more sophisticated, we realized certain technologies were essential.
+
+- A web host with PHP and MySQL. Both of those technologies are common among web hosts.
+- A domain name. You can get your own .com (or .net, .biz, .it etc) from most web hosts.
+- The ability to send files and set folder permissions via FTP. 
+- A little HTML & CSS kow-how won’t hurt, although you can run most of the site without knowing code.
+
+
+## Conclusion
+
+That’s a lot to take in. Let’s pause for a minute to recap.
+
+1. The Grawlix CMS specializes in publishing comics online.
+2. It’s designed to handle the mundane parts of running a comic so you can focus on creating.
+3. It requires a web host with PHP and MySQL.
+4. It’s been a team effort, and we appreciate support.
+
+
+
+
