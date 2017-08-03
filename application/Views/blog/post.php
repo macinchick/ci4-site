@@ -1,12 +1,12 @@
 <?php
 
-/*
 if ( $date )
 {
 	$date_parts = explode('-',$date);
 	$show_date = date('F j, Y',mktime(0,0,0,$date_parts[1],$date_parts[2],$date_parts[0]));
 }
 
+/*
 if ( $hero )
 {
 	$hero = explode('||',$hero);
@@ -17,7 +17,7 @@ if ( $hero )
 ?><main>
 	<article role="article" class="wrapper" itemscope itemtype="https://schema.org/BlogPosting" id="blog-post">
 		<?php //echo $hero; ?>
-		<h1 itemprop="headline"><?php //echo $headline; ?></h1>
+		<h1 itemprop="headline"><?php echo $headline; ?></h1>
 		<div itemprop="articleBody">
 			<?php echo $article_content; ?>
 			<!--a href="https://twitter.com/share" class="twitter-share-button">Tweet this post</a>
@@ -29,12 +29,12 @@ if ( $hero )
 	<aside role="complementary" class="sidenav">
 		<h2><a href="/blog">&lt; Blog</a></h2><br/>
 		<p class="article-meta">
-			<?php //if ( $date ) : ?>
-				<time class="datestamp" itemprop="datePublished" datetime="<?php //echo $date; ?>"><?php //echo $show_date; ?></time><br/>
-			<?php //endif; ?>
-			<?php //if ( $byline ) : ?>
-				by <a href="https://twitter.com/grawlixcomix/"><span itemprop="author" class="byline"><?php //echo $byline; ?></span></a>
-			<?php //endif; ?>
+			<?php if ( $date ) : ?>
+				<time class="datestamp" itemprop="datePublished" datetime="<?php echo $date; ?>"><?php echo $show_date; ?></time><br/>
+			<?php endif; ?>
+			<?php if ( $byline ) : ?>
+				by <a href="https://twitter.com/grawlixcomix/"><span itemprop="author" class="byline"><?php echo $byline; ?></span></a>
+			<?php endif; ?>
 		</p>
 	</aside>
 </main>

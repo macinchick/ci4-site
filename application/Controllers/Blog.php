@@ -62,7 +62,6 @@ class Blog extends BaseController
 			$content = implode("\n", $text);
 			$parsedown = new Parsedown();
 			$data['article_content'] = $parsedown->text($content);
-//			$data['byline'] = $meta_data['byline'];
 
 		}
 		// 404
