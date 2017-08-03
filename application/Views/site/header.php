@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>$meta_title | The Grawlix CMS</title>
+	<title><?= $meta_title ?> | The Grawlix CMS</title>
 	<link rel="stylesheet" href="/css/docs.css" />
-	<meta name="description" content="$meta_description" />
+	<meta name="description" content="<?= $meta_description ?>" />
 	<script src="js/modernizr.min.js"></script>
 	<link rel="shortcut icon" href="/img/favicon.ico" />
 	<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -32,7 +32,7 @@
 				<a href="/"><img src="/img/logo_small.svg" alt="Logo for the Grawlix CMS" role="banner" /></a>
 			</figure>
 			<div class="page-identifier">
-				<span class="subheader">Grawlix — The CMS for Comics</span>$page_title
+				<span class="subheader">Grawlix — The CMS for Comics</span><?= $page_title ?>
 			</div>
 		</div>
 	</header>
