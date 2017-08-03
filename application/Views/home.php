@@ -1,139 +1,121 @@
-<!doctype html>
-<html>
-	<head>
-		<title>Welcome to CodeIgniter</title>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>The Grawlix CMS &#8253; Website publishing for webcomic artists</title>
+	<link rel="stylesheet" href="css/home.css" />
+	<link rel="stylesheet" href="css/fontawesome.css" />
+	<script src="js/modernizr.min.js"></script>
+	<link rel="shortcut icon" href="img/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+	<link rel="icon" type="image/png" href="img/favicon-196x196.png" sizes="196x196" />
+	<meta name="msapplication-TileColor" content="#6b4faf" />
+	<meta name="msapplication-TileImage" content="img/mstile-144x144.png" />
+	<meta name="msapplication-config" content="img/browserconfig.xml" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
-	</head>
-	<body>
+  ga('create', 'UA-49738851-1', 'auto');
+  ga('send', 'pageview');
 
-		<style {csp-style-nonce}>
-			div.logo {
-				height: 200px;
-				width: 155px;
-				display: inline-block;
-				opacity: 0.08;
-				position: absolute;
-				top: 2rem;
-				left: 50%;
-				margin-left: -73px;
-			}
-			body {
-				height: 100%;
-				background: #fafafa;
-				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-				color: #777;
-				font-weight: 300;
-			}
-			h1 {
-				font-weight: lighter;
-				letter-spacing: 0.8;
-				font-size: 3rem;
-				margin-top: 145px;
-				margin-bottom: 0;
-				color: #222;
-			}
-			.wrap {
-				max-width: 1024px;
-				margin: 5rem auto;
-				padding: 2rem;
-				background: #fff;
-				text-align: center;
-				border: 1px solid #efefef;
-				border-radius: 0.5rem;
-				position: relative;
-			}
-			.version {
-				margin-top: 0;
-				color: #999;
-			}
-			.guide {
-				margin-top: 3rem;
-				text-align: left;
-			}
-			pre {
-				white-space: normal;
-				margin-top: 1.5rem;
-			}
-			code {
-				background: #fafafa;
-				border: 1px solid #efefef;
-				padding: 0.5rem 1rem;
-				border-radius: 5px;
-				display: block;
-			}
-			p {
-				margin-top: 1.5rem;
-			}
-			.footer {
-				margin-top: 2rem;
-				border-top: 1px solid #efefef;
-				padding: 1em 2em 0 2em;
-				font-size: 85%;
-				color: #999;
-			}
-			a:active,
-			a:link,
-			a:visited {
-				color: #dd4814;
-			}
-		</style>
-
-		<div class="wrap">
-
-			<h1>Welcome to CodeIgniter</h1>
-
-			<p class="version">version <?= CodeIgniter\CodeIgniter::CI_VERSION ?></p>
-
-			<div class="logo">
-				<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-					 width="155.000000px" height="200.000000px" viewBox="0 0 155.000000 200.000000"
-					 preserveAspectRatio="xMidYMid meet">
-				<g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-				<path d="M737 1963 c22 -79 -7 -185 -78 -290 -18 -26 -107 -122 -197 -213
-					  -239 -240 -336 -371 -403 -544 -79 -206 -78 -408 5 -582 64 -134 212 -264 361
-					  -314 l60 -20 -30 22 c-210 152 -229 387 -48 588 25 27 48 50 51 50 4 0 7 -27
-					  7 -61 0 -57 2 -62 37 -95 30 -27 46 -34 78 -34 56 0 99 24 116 65 29 69 16
-					  120 -50 205 -105 134 -117 233 -43 347 l31 48 7 -47 c13 -82 58 -129 250 -258
-					  209 -141 306 -261 328 -405 11 -72 -1 -161 -31 -218 -27 -53 -112 -143 -165
-					  -174 -24 -14 -43 -26 -43 -28 0 -2 24 4 53 14 241 83 427 271 482 486 19 76
-					  19 202 -1 285 -35 152 -146 305 -299 412 l-70 49 -6 -33 c-8 -48 -26 -76 -59
-					  -93 -45 -23 -103 -19 -138 10 -67 57 -78 146 -37 305 30 116 32 206 5 291 -27
-					  89 -104 206 -162 247 -17 13 -18 12 -11 -15z"/>
-				</g>
-				</svg>
+</script>
+</head>
+<body>
+	<header class="intro">
+		<div class="container">
+			<nav>
+				<a href="/downloads">Downloads</a>
+				<a href="/docs" class="yah">Docs</a>
+				<a href="/forum">Forum</a><a href="/blog">Blog</a>
+				<a href="/case_studies">Examples</a>
+				<a href="/goodies">Goodies</a>
+				<a href="/search/"><img src="/img/search.icon.png" alt="Search this site" class="icon-16"/></a>
+				<a href="https://twitter.com/grawlixcomix" style=""><img src="/img/twitter.icon.png" alt="Twitter @grawlixcomix" class="icon-16"/></a>
+				<a href="http://patreon.com/grawlixcomix"><img src="/img/patreon.icon.png" alt="Support us on Patreon" class="icon-16"/></a>
+			</nav>
+			<div class="hero">
+				<img src="/img/bleep-papers.png" alt="Bleep the bat" class="hero-art"/>
+				<div class="hero-set">
+					<h1 class="hero-title"><img src="/img/cms-hero.svg" alt="The Grawlix CMS for indie webcomics"/></h1>
+					<div class="hero-cta-set">
+						<a href="/downloads" class="hero-cta-download"><img src="/img/hero-cta-download.svg" alt="Download the system"></a>
+						<a href="https://patreon.com/grawlixcomix" class="hero-cta-patreon"><img src="/img/hero-cta-patreon.svg" alt="Support us on Patreon"></a>
+					</div>
+				</div>
 			</div>
-
-			<div class="guide">
-				<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-				<p>If you would like to edit this page you'll find it located at:</p>
-
-				<pre>
-				<code>
-					application/Views/welcome_message.php
-				</code>
-				</pre>
-
-				<p>The corresponding controller for this page is found at:</p>
-
-				<pre>
-				<code>
-					application/Controllers/Home.php
-				</code>
-				</pre>
-
-				<p>If you are exploring CodeIgniter for the very first time, you
-					should start by reading the (in progress)
-					<a href="https://bcit-ci.github.io/CodeIgniter4">User Guide</a>.</p>
-
-			</div>
-
-			<div class="footer">
-				Page rendered in {elapsed_time} seconds. Environment: <?= ENVIRONMENT ?>
-			</div>
+		</div>
+	</header>
+	<section id="topmost" class="video" itemscope itemtype="https://schema.org/Product">
+		<div class="container">
+			<iframe width="853" height="480" src="https://www.youtube.com/embed/L_CumMOpjkU" frameborder="0" allowfullscreen></iframe>
 
 		</div>
+	</section>
+	<section id="story" class="story container">
+		<div class="text">
+			<h1 id="intro">Use <span itemprop="name">the Grawlix CMS</span> to share your stories with readers</h1>
+			<meta itemprop="audience" content="webcomic artists" />
+			<p itemprop="description">Building a webcomic is more than slapping a graphic into a template. The Grawlix CMS is designed specifically for sequential storytelling. It encourages readers to tap from one page to the next. This sequential nature means it has automatic archives; pages optionally arranged by chapter, story arc, etc; themes that change per chapter; and other goodies specifically for webcomics.</p>
 
-	</body>
+			<h2>How does it work?</h2>
+			<p>The Grawlix CMS is a set of software you upload to a web host via FTP. It lets you control the entire site, its pages, and its comics, though a web-based admin panel. You can edit the built-in themes’ HTML/CSS &amp; graphics, or create your own.</p>
+			<p>Download the software. Upload to your host. Run the install script. Customize to your liking. Publish webcomics!</p>
+		</div>
+		<div class="image">
+			<img src="img/marketing-bleep-3b.png" alt="bleep"/>
+		</div>
+	</section>
+
+	<section id="features" class="container feature-set">
+		<div class="feature-item">
+			<i class="fa fa-forward fa-4x"></i>
+			<h3>Speed</h3>
+			<p>Blazing fast load times. Pages appear as fast your images can download.</p>
+		</div>
+		<div class="feature-item">
+			<i class="fa fa-flag fa-4x"></i>
+			<h3>Markers</h3>
+			<p>Optionally organize your webcomic into chapters, scenes, guest art days, story arcs, and more.</p>
+		</div>
+		<div class="feature-item">
+			<i class="fa fa-paint-brush fa-4x"></i>
+			<h3>Flexible styles</h3>
+			<p>Adapt chapters’ looks based on your theme with a little CSS voodoo.</p>
+		</div>
+		<div class="feature-item">
+			<i class="fa fa-archive fa-4x"></i>
+			<h3>Awesome archives</h3>
+			<p>You decide how readers browse past pages. Automatically generated as you create pages.</p>
+		</div>
+		<div class="feature-item">
+			<i class="fa fa-calendar fa-4x"></i>
+			<h3>Publish dates</h3>
+			<p>Set pages to appear in the distant future! Or next Thursday. That’s good too.</p>
+		</div>
+		<div class="feature-item">
+			<i class="fa fa-file-text fa-4x"></i>
+			<h3>Blog &amp; transcript</h3>
+			<p>Share your thoughts of the day while you support search engines &amp; screen readers.</p>
+		</div>
+	</section>
+
+	<footer class="outro">
+		<div class="container">
+			<h1 id="call-to-action">Publish your comic on the web!</h1>
+			<p><a class="cta primary" href="/downloads">Download</a></p>
+			<p class="secondary-cta">
+				<a href="http://patreon.com/grawlixcomix">Patreon</a>
+				<a href="/docs">Docs</a>
+				<a href="https://twitter.com/grawlixcomix">@grawlixcomix</a>
+				<a href="https://gumroad.com/products/SACCb">#LearnToCode</a>
+				<a href="https://inkdropcafe.com/">Ink Drop Café</a>
+			</p>
+			&copy; 2014–<?=date('Y');?> Ben Gremillion &amp; Cherie Benoit. Bleep designed by <a href="http://jefflaclede.com/">Jeff Laclede</a>.
+		</div>
+	</footer>
+</body>
 </html>
