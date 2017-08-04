@@ -1,5 +1,7 @@
 <?php namespace App\Controllers;
 
+use App\Models\DocsModel_1;
+
 class Docs extends BaseController
 {
 
@@ -29,6 +31,8 @@ class Docs extends BaseController
 
 	public function index()
 	{
+		$test = new DocsModel_1();
+
 		$data = $this->view_data;
 
 		echo view('site/header', $data);
