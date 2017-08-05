@@ -29,11 +29,16 @@ class Docs extends BaseController
 
 	//--------------------------------------------------------------------
 
+	/**
+	 * Display the list of doc topics
+	 */
 	public function index()
 	{
-		$test = new DocsModel_1();
-
 		$data = $this->view_data;
+
+		$docs = new DocsModel_1();
+
+		$data['topics'] = $docs->toc();
 
 		echo view('site/header', $data);
 		echo view('docs/main', $data);

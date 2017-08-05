@@ -3,22 +3,23 @@
 /**
  * Version 1.x Docs
  */
-
 class DocsModel_1 {
 
-	public $traffic_list_topics = array(
-		'cms' => array( 'title' => 'Tools' ),
+	/**
+	 * List topics in order of appearance
+	 */
+	protected $list_topics = array(
 		'concepts' => array( 'title' => 'Concepts' ),
-		'customization' => array( 'title' => 'Customization' ),
-		'docs' => array( 'title' => 'Docs' ),
-		'glossary' => array( 'title' => 'Glossary' ),
-		'main' => array( 'title' => 'Main' ),
-		'misc' => array( 'title' => 'Miscellaneous' ),
+		'cms' => array( 'title' => 'CMS tools' ),
 		'operational' => array( 'title' => 'Operational' ),
+		'customization' => array( 'title' => 'Customization' ),
 	);
 
-	public $traffic_list = array(
-		'main' => array(
+	/**
+	 * Content for each topic in $list_topics
+	 */
+	protected $list_content = array(
+		'concepts' => array(
 			'prologue' => array(
 				'title' => 'What is the Grawlix CMS?',
 				'url' => 'prologue.md'
@@ -26,23 +27,7 @@ class DocsModel_1 {
 			'sequential-structure' => array(
 				'title' => 'Sequential structure',
 				'url' => 'sequential-structure.md'
-			)
-		),
-		'docs' => array(
-			'topics' => array(
-				'title' => 'Topics',
-				'url' => 'topics.php'
 			),
-			'search' => array(
-				'title' => 'Search',
-				'url' => 'search.php'
-			),
-			'license' => array(
-				'title' => 'License',
-				'url' => 'license.md'
-			),
-		),
-		'concepts' => array(
 			'comic-pages' => array(
 				'title' => 'Comic pages',
 				'description' => 'Comic pages contain graphics that make up the narrative. They’re what readers came to read.',
@@ -76,6 +61,43 @@ class DocsModel_1 {
 				'visible' => false
 			)
 		),
+		'cms' => array(
+			'archives' => array(
+				'title' => 'Archives',
+				'description' => 'Archives let readers browse older pages in your comic. You can control what they see and, to an extent, how they navigate.',
+				'url' => 'archives.md'
+			),
+			'book-view' => array(
+				'title' => 'Book view',
+				'description' => 'The Grawlix CMS provides an overview of your books’ contents — their pages and markers — called the Book View. This script lists pages in order, allows you to add or remove markers, and to create new pages.',
+				'url' => 'book-view.md'
+			),
+			'media-library' => array(
+				'title' => 'Media library',
+				'description' => 'Manage your images and their related data, including alt descriptions and thumbnails, from a single source.',
+				'url' => 'media-library.md'
+			),
+			'health-check' => array(
+				'title' => 'Health check',
+				'description' => 'Health check is a tool to monitor technical aspects of the site. You won’t need this most of the time, but it comes in handy if something seems odd configuration-wise.',
+				'url' => 'health-check.md'
+			),
+			'main-menu' => array(
+				'title' => 'Main menu',
+				'description' => 'The menu is a series of links in your site’s design that take readers to non-comic pages in your site. Traditionally called navigation or a nav bar, we call the menu a “menu” to differentiate it from the first/back/next/last links on each comic page.',
+				'url' => 'main-menu.md'
+			),
+			'settings' => array(
+				'title' => 'Settings',
+				'description' => 'You can control site-wide preferences in the “Settings” section of your admin panel.',
+				'url' => 'settings.md'
+			),
+			'social-media' => array(
+				'title' => 'Social media',
+				'description' => 'Social media refers to the ability to tell people about a site or comic page — “hey, check this out” — often with the push of a button.',
+				'url' => 'social-media.md'
+			),
+		),
 		'operational' => array(
 			'requirements' => array(
 				'title' => 'Requirements',
@@ -85,7 +107,7 @@ class DocsModel_1 {
 			'installation' => array(
 				'title' => 'Installation',
 				'description' => 'The Grawlix CMS comes with a file called firstrun.php. As the name implies, this is the script you need to run first. Visit yoursite.com/firstrun.php and follow the prompts.',
-			'url' => 'firstrun.md'
+				'url' => 'firstrun.md'
 			),
 			'importing' => array(
 				'title' => 'Importing images',
@@ -118,108 +140,50 @@ class DocsModel_1 {
 				'url' => 'metadata.md'
 			),
 		),
-		'cms' => array(
-			'advertising' => array(
-				'title' => 'Advertising',
-				'description' => 'Ads are clickable parts of a theme that take people to other sites, preferably with the intent of spending moolah.',
-				'url' => 'advertising.md'
-			),
-			'archives' => array(
-				'title' => 'Archives',
-				'description' => 'Archives let readers browse older pages in your comic. You can control what they see and, to an extent, how they navigate.',
-				'url' => 'archives.md'
-			),
-			'book-view' => array(
-				'title' => 'Book view',
-				'description' => 'The Grawlix CMS provides an overview of your books’ contents — their pages and markers — called the Book View. This script lists pages in order, allows you to add or remove markers, and to create new pages.',
-				'url' => 'book-view.md'
-			),
-			'health-check' => array(
-				'title' => 'Health check',
-				'description' => 'Health check is a tool to monitor technical aspects of the site. You won’t need this most of the time, but it comes in handy if something seems odd configuration-wise.',
-				'url' => 'health-check.md'
-			),
-			'link-list' => array(
-				'title' => 'Link list',
-				'description' => 'A “link list” is a collection of sites that artists want to share with her/his readers. The Grawlix CMS comes with two link lists: One that appears on the side of a page, and one that’s an entire page.',
-				'url' => 'link-list.md'
-			),
-			'main-menu' => array(
-				'title' => 'Main menu',
-				'description' => 'The menu is a series of links in your site’s design that take readers to non-comic pages in your site. Traditionally called navigation or a nav bar, we call the menu a “menu” to differentiate it from the first/back/next/last links on each comic page.',
-				'url' => 'main-menu.md'
-			),
-			'settings' => array(
-				'title' => 'Settings',
-				'description' => 'You can control site-wide preferences in the “Settings” section of your admin panel.',
-				'url' => 'settings.md'
-			),
-			'social-media' => array(
-				'title' => 'Social media',
-				'description' => 'Social media refers to the ability to tell people about a site or comic page — “hey, check this out” — often with the push of a button.',
-				'url' => 'social-media.md'
-			),
-		),
 		'customization' => array(
-			'overview' => array(
-				'title' => 'Overview',
-				'description' => 'overview',
-				'url' => 'customizing-overview.md'
-			),
 			'themes' => array(
 				'title' => 'Themes',
 				'description' => 'A theme is a set of files and database info that gives a Grawlix site its unique look and feel.',
 				'url' => 'themes.md'
 			),
 			'show' => array(
-				'title' => 'Show',
+				'title' => 'The show() function',
 				'description' => 'show() is a function for displaying predefined items that usually come from the database. The text in quotes corresponds to a label used by the Grawlix CMS.',
 				'url' => 'show-function.md'
 			),
 			'snippets' => array(
-				'title' => 'Snippets',
+				'title' => 'The snippet() function',
 				'description' => 'Each PHP script in a Grawlix theme is actually part of a given web page. The Grawlix CMS assembles HTML from different parts we call “snippets”.',
 				'url' => 'snippets.md'
 			),
-		),
-		'glossary' => array(
-			'apache' => array(
-				'title' => 'Apache',
-				'description' => 'Apache is a program that sends web pages to browsers that request data.',
-				'url' => 'apache.md'
-			),
-			'domain-name' => array(
-				'title' => 'Domain name',
-				'description' => 'A domain name is the principle address of a website.',
-				'url' => 'domain-name.md'
-			),
-			'web-host' => array(
-				'title' => 'Web host',
-				'description' => 'A web host is a company that owns computers (servers) that specialize in giving information to browsers on demand.',
-				'url' => 'web-host.md'
-			),
-			'url' => array(
-				'title' => 'URL',
-				'description' => 'URL stands for Uniform Resource Location. It’s the complete address of a page on the web.',
-				'url' => 'url.md'
-			),
-		),
-		'misc' => array(
-			'special-thanks' => array(
-				'title' => 'Special thanks',
-				'description' => '',
-				'url' => 'shout-out.md'
+			'static-patterns' => array(
+				'title' => 'Static patterns',
+				'description' => 'Patterns are theme files that let you edit the HTML on static pages — specifically, their content blocks.',
+				'url' => 'static-patterns.md'
 			),
 		),
 	);
 
 	//--------------------------------------------------------------------
 
-	public function __construct()
+	/**
+	 * Put the arrays together and return the table of contents.
+	 *
+	 * @return		array
+	 */
+	public function toc()
 	{
+		$master = array();
+
+		foreach ($this->list_topics as $slug => $arr)
+		{
+			$master[$slug]['title'] = $arr['title'];
+			$master[$slug]['content'] = $this->list_content[$slug];
+		}
+
+		return $master;
 	}
 
 	//--------------------------------------------------------------------
-
 
 }
