@@ -7,7 +7,7 @@ class BaseController extends Controller
 
 	protected $helpers = ['cookie', 'filesystem', 'form', 'html', 'text'];
 
-	protected $is_patron = NULL;
+	protected $logged_in = NULL;
 
 	//--------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ class BaseController extends Controller
 		$this->db = \Config\Database::connect();
 
 		// Hard coded for testing
-		$this->is_patron = TRUE;
+		$this->logged_in = TRUE;
 	}
 
 	//--------------------------------------------------------------------
