@@ -186,4 +186,25 @@ class DocsModel_1 {
 
 	//--------------------------------------------------------------------
 
+	/**
+	 * Given a page slug, return the list of topics for that entire section.
+	 *
+	 * @param		string
+	 * @return		array
+	 */
+	public function section($slug)
+	{
+		foreach ($this->list_content as $section => $list)
+		{
+			if (array_key_exists($slug, $list))
+			{
+				$section_list = $this->list_topics[$section];
+				$section_list['content'] = $list;
+				return $section_list;
+			}
+		}
+	}
+
+	//--------------------------------------------------------------------
+
 }

@@ -39,7 +39,6 @@ class Docs extends BaseController
 		$data = $this->view_data;
 
 		$docs = new DocsModel_1();
-
 		$data['topics'] = $docs->toc();
 
 		echo view('site/header', $data);
@@ -49,18 +48,36 @@ class Docs extends BaseController
 
 	//--------------------------------------------------------------------
 
+	/**
+	 * Display a version 1 doc page.
+	 *
+	 * @param		string
+	 */
 	public function version_1($slug)
 	{
 		$path = $this->content_path.'1/'.$slug.'.md';
-		$this->get_post($path);
+		$data = $this->get_post($path);
+
+		$docs = new DocsModel_1();
+		$data['topics'] = $docs->section($slug);
+		$data['current_slug'] = $slug;
+
+		echo view('site/header', $data);
+		echo view('docs/post', $data);
+		echo view('site/footer', $data);
 	}
 
 	//--------------------------------------------------------------------
 
+	/**
+	 * Parse the markdown file for this doc page.
+	 *
+	 * @param		string
+	 * @return		array
+	 */
 	public function get_post($path)
 	{
 		$data = $this->view_data;
-		echo '<pre>$data|';print_r($data);echo '|</pre>';
 
 		if (file_exists($path))
 		{
@@ -77,7 +94,8 @@ class Docs extends BaseController
 			$parsedown = new Parsedown();
 			$data['article_content'] = $parsedown->text($content);
 		}
-		echo '<pre>$data|';print_r($data);echo '|</pre>';
+
+		return $data;
 	}
 
 	//--------------------------------------------------------------------
