@@ -2,6 +2,8 @@
 
 use App\Models\DocsModel_1;
 
+use App\Libraries\Parsedown;
+
 class Docs extends BaseController
 {
 
@@ -47,12 +49,37 @@ class Docs extends BaseController
 
 	//--------------------------------------------------------------------
 
-	public function version_1($keyword)
+	public function version_1($slug)
+	{
+		$path = $this->content_path.'1/'.$slug.'.md';
+		$this->get_post($path);
+	}
+
+	//--------------------------------------------------------------------
+
+	public function get_post($path)
 	{
 		$data = $this->view_data;
 		echo '<pre>$data|';print_r($data);echo '|</pre>';
 
-		echo '<pre>$keyword|';print_r($keyword);echo '|</pre>';
+		if (file_exists($path))
+		{
+			$text = file($path);
+			$data['meta_title'] = trim(array_shift($text));
+			$data['headline'] = trim(array_shift($text));
+			$data['meta_description'] = trim(array_shift($text));
+			$data['date'] = trim(array_shift($text));
+			$data['byline'] = trim(array_shift($text));
+			$data['tags'] = trim(array_shift($text));
+			$data['extra'] = trim(array_shift($text));
+
+			$content = implode("\n", $text);
+			$parsedown = new Parsedown();
+			$data['article_content'] = $parsedown->text($content);
+		}
+		echo '<pre>$data|';print_r($data);echo '|</pre>';
 	}
+
+	//--------------------------------------------------------------------
 
 }
