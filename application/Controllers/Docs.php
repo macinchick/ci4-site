@@ -47,4 +47,12 @@ class Docs extends BaseController
 
 	//--------------------------------------------------------------------
 
+	public function version_1($keyword)
+	{
+		$data = $this->view_data;
+		echo '<pre>$data|';print_r($data);echo '|</pre>';
+
+		echo '<pre>$keyword|';print_r($keyword);echo '|</pre>';
+	}
+
 }

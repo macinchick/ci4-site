@@ -76,6 +76,11 @@ $routes->discoverLocal(false);
 // route since we don't have to scan directories.
 $routes->add('/', 'Home::index');
 
+// Docs
+$routes->add('/docs/1', 'Docs::index');
+$routes->add('/docs/1/(:segment)', 'Docs::version_1/$1');
+
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
