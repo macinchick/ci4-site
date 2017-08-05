@@ -9,16 +9,37 @@ class DocsModel_1 {
 	 * List topics in order of appearance
 	 */
 	protected $list_topics = array(
-		'concepts' => array( 'title' => 'Concepts' ),
-		'cms' => array( 'title' => 'CMS tools' ),
-		'operational' => array( 'title' => 'Operational' ),
-		'customization' => array( 'title' => 'Customization' ),
+		'concepts' => array(
+			'title' => 'Concepts',
+			'toc' => TRUE
+		),
+		'cms' => array(
+			'title' => 'CMS tools',
+			'toc' => TRUE
+		),
+		'operational' => array(
+			'title' => 'Operational',
+			'toc' => TRUE
+		),
+		'customization' => array(
+			'title' => 'Customization',
+			'toc' => TRUE
+		),
+		'glossary' => array(
+			'title' => 'Glossary',
+			'toc' => FALSE
+		),
+		'misc' => array(
+			'title' => 'Misc',
+			'toc' => FALSE
+		),
 	);
 
 	/**
 	 * Content for each topic in $list_topics
 	 */
 	protected $list_content = array(
+	/* ! concepts */
 		'concepts' => array(
 			'prologue' => array(
 				'title' => 'What is the Grawlix CMS?',
@@ -61,6 +82,7 @@ class DocsModel_1 {
 				'visible' => false
 			)
 		),
+	/* ! cms */
 		'cms' => array(
 			'archives' => array(
 				'title' => 'Archives',
@@ -98,6 +120,7 @@ class DocsModel_1 {
 				'url' => 'social-media.md'
 			),
 		),
+	/* ! operational */
 		'operational' => array(
 			'requirements' => array(
 				'title' => 'Requirements',
@@ -140,6 +163,7 @@ class DocsModel_1 {
 				'url' => 'metadata.md'
 			),
 		),
+	/* ! customization */
 		'customization' => array(
 			'themes' => array(
 				'title' => 'Themes',
@@ -162,6 +186,37 @@ class DocsModel_1 {
 				'url' => 'static-patterns.md'
 			),
 		),
+	/* ! glossary */
+		'glossary' => array(
+			'apache' => array(
+				'title' => 'Apache',
+				'description' => 'Apache is a program that sends web pages to browsers that request data.',
+				'url' => 'apache.md'
+			),
+			'domain-name' => array(
+				'title' => 'Domain name',
+				'description' => 'A domain name is the principle address of a website.',
+				'url' => 'domain-name.md'
+			),
+			'web-host' => array(
+				'title' => 'Web host',
+				'description' => 'A web host is a company that owns computers (servers) that specialize in giving information to browsers on demand.',
+				'url' => 'web-host.md'
+			),
+			'url' => array(
+				'title' => 'URL',
+				'description' => 'URL stands for Uniform Resource Location. It’s the complete address of a page on the web.',
+				'url' => 'url.md'
+			),
+		),
+	/* ! misc */
+		'misc' => array(
+			'special-thanks' => array(
+				'title' => 'Special thanks',
+				'description' => '',
+				'url' => 'shout-out.md'
+			),
+		),
 	);
 
 	//--------------------------------------------------------------------
@@ -177,8 +232,11 @@ class DocsModel_1 {
 
 		foreach ($this->list_topics as $slug => $arr)
 		{
-			$master[$slug]['title'] = $arr['title'];
-			$master[$slug]['content'] = $this->list_content[$slug];
+			if ($arr['toc'] === TRUE)
+			{
+				$master[$slug]['title'] = $arr['title'];
+				$master[$slug]['content'] = $this->list_content[$slug];
+			}
 		}
 
 		return $master;
