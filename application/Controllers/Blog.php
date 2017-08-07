@@ -8,7 +8,7 @@ class Blog extends BaseController
 	/**
 	 * Directory that contains blog content files
 	 */
-	protected $content_path = APPPATH.'Views/blog_content/';
+	protected $content_path = ASSETS_PATH.'blog/';
 
 	/**
 	 * Data for views
@@ -62,7 +62,6 @@ class Blog extends BaseController
 			$content = implode("\n", $text);
 			$parsedown = new Parsedown();
 			$data['article_content'] = $parsedown->text($content);
-
 		}
 		// 404
 		else
